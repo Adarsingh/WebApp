@@ -95,7 +95,6 @@
         <table>
             <thead>
                 <tr>
-                    <!-- Assuming the JSON has a list of objects with the same keys -->
                     {% if data and data | length > 0 %}
                         {% for key in data[0].keys() %}
                             <th>{{ key }}</th>
@@ -104,7 +103,6 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Populate table rows with data from JSON -->
                 {% for item in data %}
                     <tr>
                         {% for value in item.values() %}

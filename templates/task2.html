@@ -1,10 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 2</title>
-    <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -77,7 +78,6 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <!-- Assuming the JSON has a list of objects with the same keys -->
                             {% if data and data | length > 0 %}
                                 {% for key in data[0].keys() %}
                                     <th>{{ key }}</th>
@@ -86,7 +86,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Populate table rows with data from JSON -->
                         {% for item in data %}
                             <tr>
                                 {% for value in item.values() %}
@@ -100,19 +99,18 @@
         </div>
     </main>
 
-    <!-- Include Bootstrap JS and dependencies (optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 
+ -->
+
+<!-- Best CSS code for task2 end
 
 
-<!-- Best CSS code for task2 end -->
 
 
-
-<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,7 +173,7 @@
         
         table {
             width: 100%;
-            max-width: 1200px; /* Increased maximum width */
+            max-width: 1800px; /* Increased maximum width */
             border-collapse: collapse;
             overflow-x: auto; /* Ensure horizontal scrolling if needed */
             display: block; /* Allows horizontal scrolling */
@@ -196,13 +194,13 @@
             background-color: #f4f4f4;
         }
         
-        /* Optional: Adjust the table header and cell styles */
+        
         th {
             font-weight: bold;
         }
         
         td {
-            font-size: 0.9em; /* Optional: Slightly smaller font size for table cells */
+            font-size: 0.9em; 
         }
     </style>
 </head>
@@ -247,7 +245,7 @@
     </main>
 </body>
 </html>
- -->
+
 
 
 

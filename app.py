@@ -236,9 +236,9 @@ db_config = {
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, Decimal):
-            return float(obj)  # Convert Decimal to float
+            return float(obj)  
         elif isinstance(obj, datetime):
-            return obj.isoformat()  # Convert datetime to ISO format string
+            return obj.isoformat()  
         return super(CustomJSONEncoder, self).default(obj)
 
 def query_database(query):
@@ -253,9 +253,9 @@ def query_database(query):
             row_dict = {}
             for col_name, value in zip(columns, row):
                 if isinstance(value, Decimal):
-                    row_dict[col_name] = float(value)  # Convert Decimal to float
+                    row_dict[col_name] = float(value)  
                 elif isinstance(value, datetime):
-                    row_dict[col_name] = value.isoformat()  # Convert datetime to ISO format string
+                    row_dict[col_name] = value.isoformat()
                 else:
                     row_dict[col_name] = value
             results.append(row_dict)
