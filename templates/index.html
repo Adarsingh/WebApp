@@ -1,0 +1,329 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}Task 1{% endblock %}
+
+{% block content %}
+    <div class="carousel">
+        <button class="carousel-control prev">&#10094;</button>
+        <div class="carousel-images">
+            <img src="{{ url_for('static', filename='images/cat_picture.jpg') }}" alt="Image 1">
+            <img src="{{ url_for('static', filename='images/dog_picture.jpg') }}" alt="Image 2">
+            <img src="{{ url_for('static', filename='images/cat_picture.jpg') }}" alt="Image 3">
+        </div>
+        <button class="carousel-control next">&#10095;</button>
+    </div>
+
+    <div class="text-boxes">
+        <div class="info-box">Adarsh Singh</div>
+        <div class="info-box">Hates Frontend</div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+<!-- Perfet Code for task 1 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Task 1</a></li>
+                <li><a href="#">Task 2</a></li>
+                <li><a href="#">Task 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="carousel">
+            <button class="carousel-control prev">&#10094;</button>
+            <div class="carousel-images">
+                <img src="{{ url_for('static', filename='images/cat_picture.jpg') }}" alt="Image 1">
+                <img src="{{ url_for('static', filename='images/dog_picture.jpg') }}" alt="Image 2">
+                <img src="{{ url_for('static', filename='images/cat_picture.jpg') }}" alt="Image 3">
+                
+            </div>
+            <button class="carousel-control next">&#10095;</button>
+        </div>
+
+        <div class="text-boxes">
+            <div class="info-box">Adarsh Singh</div>
+            <div class="info-box">Hates Frontend</div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Images to small -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web App</title>
+    <style>
+        .square-box {
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        .menu-bar {
+            font-size: medium;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        .image-carousel {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .image-carousel img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        .image-carousel img.active {
+            display: block;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px; /* Adjust the size of the arrows */
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .textbox {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="#">Task 1</a>
+        <a href="#">Task 2</a>
+        <a href="#">Task 3</a>
+    </div>
+    <div class="square-box">
+        <div class="image-carousel">
+            <img class="active" src="{{ url_for('static', filename='dog_picture.jpg') }}" alt="Image 1">
+            <img src="{{ url_for('static', filename='cat_picture.jpg') }}" alt="Image 2">
+            <div class="arrow left"><</div>
+            <div class="arrow right">></div>
+        </div>
+        <div class="textbox">
+            <p>My name</p>
+        </div>
+        <div class="textbox">
+            <p>Hello!</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var $carousel = $('.image-carousel');
+            var $imgs = $carousel.find('img');
+            var index = 0;
+
+            function cycleImages() {
+                var $current = $($imgs[index]);
+                $imgs.removeClass('active');
+                $current.addClass('active');
+            }
+
+            $carousel.find('.arrow.right').click(function() {
+                index = (index + 1) % $imgs.length;
+                cycleImages();
+            });
+
+            $carousel.find('.arrow.left').click(function() {
+                index = (index - 1 + $imgs.length) % $imgs.length;
+                cycleImages();
+            });
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+
+<!-- Image not Loading -->
+<!-- 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Image Carousel Webpage</title>
+ <style>
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+   }
+   .navbar {
+     display: flex;
+     list-style-type: none;
+     background-color: #333;
+     padding: 10px;
+   }
+   .navbar li {
+     color: white;
+     padding: 10px;
+     cursor: pointer;
+   }
+   .carousel-container {
+     position: relative;
+     width: 100%;
+     height: 500px;
+     margin: 20px 0;
+     overflow: hidden;
+   }
+   .carousel-slide img {
+     width: 100%;
+     height: 100%;
+   }
+   .arrow-left, .arrow-right {
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 24px;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding: 10px;
+     border-radius: 50%;
+   }
+   .arrow-left {
+     left: 10px;
+   }
+   .arrow-right {
+     right: 10px;
+   }
+   .information-boxes {
+     display: flex;
+     justify-content: space-around;
+     margin: 20px;
+   }
+   .info-box {
+     flex-basis: 45%;
+     border: 1px solid #000;
+     padding: 20px;
+     text-align: center;
+   }
+ </style>
+ </head>
+ <body>
+ 
+ <ul class="navbar">
+   <li>Task 1</li>
+   <li>Task 2</li>
+   <li>Task 3</li>
+ </ul>
+ 
+ <div class="carousel-container">
+   <span class="arrow-left"><</span>
+   <div class="carousel-slide">
+     <img src="C:\Users\AdarshSinghMAQSoftwa\Documents\Azure\Assignment_Projects\WebApp\static\cat_picture.jpg" alt="Image 1">
+     <img src="C:\Users\AdarshSinghMAQSoftwa\Documents\Azure\Assignment_Projects\WebApp\static\dog_picture.jpg" alt="Image 2">
+     <img src="C:\Users\AdarshSinghMAQSoftwa\Documents\Azure\Assignment_Projects\WebApp\static\cat_picture.jpg" alt="Image 3">
+   </div>
+   <span class="arrow-right">></span>
+ </div>
+ 
+ <div class="information-boxes">
+   <div class="info-box">Adarsh Singh</div>
+   <div class="info-box">Hates Frontend</div>
+ </div>
+ 
+ <script>
+   // JavaScript for enabling carousel functionality goes here.
+ </script>
+ 
+ </body>
+ </html> 
+ -->
+ 
+
+

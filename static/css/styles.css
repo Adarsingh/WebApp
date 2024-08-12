@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 50px); /* Adjust height to take header into account */
+}
+
+.carousel {
+    position: relative;
+    width: 60vw;
+    height: 50vh; /* Adjusted to half of 70vh */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px; /* Increased padding for better visibility */
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 32px; /* Increased font size */
+    transform: translateY(-50%);
+}
+
+.carousel-control.prev {
+    left: 15px; /* Adjusted for new padding size */
+}
+
+.carousel-control.next {
+    right: 15px; /* Adjusted for new padding size */
+}
+
+.text-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.text-boxes div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Increased padding for larger size */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 400px; /* Increased width */
+    height: 200px; /* Increased height */
+    background-color: #f9f9f9; /* Optional background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    font-size: center; /* Adjust font size as needed */
+}
+
+
+
